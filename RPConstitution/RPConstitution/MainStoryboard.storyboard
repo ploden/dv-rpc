@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="PrD-fV-MiX">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="0C5-or-Byb">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rI5-QA-Ev9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="TCT-zi-V8P" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dIS-eH-Gdl">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-440" y="-19"/>
+        </scene>
+        <scene sceneID="8GU-AT-JWX">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="74o-VV-E5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="QIZ-Na-5HF" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="28N-TT-bwo">
+                        <rect key="frame" x="0.0" y="64" width="320" height="788"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="QIZ-Na-5HF" id="gJp-3W-TyX"/>
+                            <outlet property="delegate" destination="QIZ-Na-5HF" id="Hzn-JD-rHc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Jd1-YI-pqH"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="92" y="-955"/>
+        </scene>
+        <scene sceneID="5oC-Kn-9GX">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAu-us-KGx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="EwS-PR-u4H" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Uhg-ok-Po6">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QIZ-Na-5HF" kind="relationship" relationship="rootViewController" id="dLN-cV-lDd"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-440" y="-955"/>
+        </scene>
+        <scene sceneID="7nE-iw-u1W">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecA-qr-8kT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <splitViewController id="PrD-fV-MiX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <connections>
+                        <segue destination="EwS-PR-u4H" kind="relationship" relationship="masterViewController" id="ndo-Er-jr9"/>
+                        <segue destination="TCT-zi-V8P" kind="relationship" relationship="detailViewController" id="6LT-Lt-IBd"/>
+                    </connections>
+                </splitViewController>
+            </objects>
+            <point key="canvasLocation" x="-1424" y="-487"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
